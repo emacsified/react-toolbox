@@ -10,6 +10,8 @@ describe("Test Component", () => {
   beforeEach(() => {
     props = {
       theme: "primary",
+      header: "This is the header",
+      text: "This is the text",
     };
   });
 

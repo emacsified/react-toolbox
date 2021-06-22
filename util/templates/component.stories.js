@@ -1,15 +1,28 @@
 module.exports = (componentName) => ({
-  content: `// Generated with util/create-component.js
+  content: `
 import React from "react";
 import ${componentName} from "./${componentName}";
+import ${componentName}Props from "./${componentName}.types";
+import { Story, Meta } from "@storybook/react";
 
 export default {
-    title: "${componentName}"
-};
+  component: TestComponent,
+  title: "Components/${componentName}",
+  argTypes: {
+    theme: {
+      options: ["primary", "secondary"],
+      control: { type: "radio" },
+    },
+  },
+} as Meta;
 
-export const WithBar = () => <${componentName} foo="bar" />;
+//👇 We create a “template” of how args map to rendering
+const Template: Story<${componentName}Props> = (args) => <${componentName} {...args} />;
 
-export const WithBaz = () => <${componentName} foo="baz" />;
-`,
+export const Primary = Template.bind({});
+
+Primary.args = {
+    theme: 'primary'
+};`,
   extension: `.stories.tsx`,
 });

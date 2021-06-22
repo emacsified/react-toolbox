@@ -1,1 +1,9 @@
 jest.setup.ts
+*.stories.tsx
+build/
+util/
+.eslintrc.js
+commitlint.config.js
+jest.config.js
+rollup.config.js
+storyshots.test.js

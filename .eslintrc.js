@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb-typescript",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -19,7 +20,7 @@ module.exports = {
     sourceType: "module",
     project: "tsconfig.json",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
     "max-len": 0,
     "react/react-in-jsx-scope": 0,
@@ -28,5 +29,6 @@ module.exports = {
     "react/jsx-indent-props": 0,
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
+    "prettier/prettier": 2,
   },
 };

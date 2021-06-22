@@ -1,11 +1,12 @@
+
 import React from "react";
-import TestComponent from "./TestComponent";
-import TestComponentProps from "./TestComponent.types";
+import Button from "./Button";
+import ButtonProps from "./Button.types";
 import { Story, Meta } from "@storybook/react";
 
 export default {
   component: TestComponent,
-  title: "Components/TestComponent",
+  title: "Components/Button",
   argTypes: {
     theme: {
       options: ["primary", "secondary"],
@@ -15,12 +16,10 @@ export default {
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<TestComponentProps> = (args) => <TestComponent {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
-  theme: "primary",
-  header: "Im the component!",
-  text: "Made with love",
+    theme: 'primary'
 };
