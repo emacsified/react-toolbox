@@ -1,0 +1,29 @@
+{
+  "useTabs": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "jsxBracketSameLine": false,
+  "parser": "flow",
+  "semi": true,
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": [".prettierrc", ".babelrc"],
+      "options": { "parser": "json" }
+    },
+    {
+      "files": "*.json",
+      "options": { "parser": "json" }
+    },
+    {
+      "files": ["*.css", "*.scss"],
+      "options": { "parser": "css" }
+    }
+  ]
+}
